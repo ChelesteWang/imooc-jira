@@ -15,6 +15,7 @@ export const isVoid = (value: unknown) =>
 // b = {name: 'Jack'}
 // b = () => {}
 // 在一个函数里，改变传入的对象本身是不好的
+
 export const cleanObject = (object: { [key: string]: unknown }) => {
   // Object.assign({}, object)
   const result = { ...object };
@@ -27,6 +28,7 @@ export const cleanObject = (object: { [key: string]: unknown }) => {
   return result;
 };
 
+// 挂载事件
 export const useMount = (callback: () => void) => {
   useEffect(() => {
     callback();
@@ -34,6 +36,7 @@ export const useMount = (callback: () => void) => {
   }, []);
 };
 
+// 节流
 // const debounce = (func, delay) => {
 //   let timeout;
 //   return (...param) => {

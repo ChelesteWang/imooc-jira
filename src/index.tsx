@@ -1,7 +1,11 @@
+// Why Did you render
 import "./wdyr";
+
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+
+// 性能监控
 import reportWebVitals from "./reportWebVitals";
 import { DevTools, loadServer } from "jira-dev-tool";
 // 务必在jira-dev-tool后面引入
@@ -10,9 +14,13 @@ import { AppProviders } from "context";
 
 loadServer(() =>
   ReactDOM.render(
+    // 严格模式
     <React.StrictMode>
+      {/* context 环境 */}
       <AppProviders>
+        {/* 调试工具 */}
         <DevTools />
+        {/* 项目主体 */}
         <App />
       </AppProviders>
     </React.StrictMode>,
