@@ -44,6 +44,7 @@ export const RegisterScreen = ({
     try {
       await run(register(values));
     } catch (e) {
+      // @ts-ignore
       onError(e);
     }
   };

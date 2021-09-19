@@ -36,6 +36,7 @@ export const LoginScreen = ({
     try {
       await run(login(values));
     } catch (e) {
+      // @ts-ignore
       onError(e);
     }
   };
